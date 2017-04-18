@@ -1,0 +1,28 @@
+<h2>Index Partial!</h2>
+<div ng-if="errormessage">
+  <p ng-bind="errormessage"></p>
+</div>
+<div ng-hide="errormessage">
+<div ng-bind="message">
+</div>
+  <table class="table table-striped">
+    <thead>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Birthday</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="f in friends">
+        <td ng-bind="f.first_name"></td>
+        <td ng-bind="f.last_name"></td>
+        <td ng-bind="f.birthday"></td>
+        <td>
+          <a href="#!/edit/{{f._id}}">Edit</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

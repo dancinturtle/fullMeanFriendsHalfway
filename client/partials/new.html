@@ -1,0 +1,10 @@
+<h2>New partial</h2>
+<div ng-if="errormessage">
+  <p>{{errormessage}}</p>
+</div>
+<form ng-submit="create()">
+  <input type="text" ng-model="new_friend.first_name">
+  <input type="text" ng-model="new_friend.last_name">
+  <input type="date" ng-model="new_friend.birthday">
+  <input type="submit" value="Make friend">
+</form>
