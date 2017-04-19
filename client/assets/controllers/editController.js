@@ -10,4 +10,11 @@ app.controller('editController', function($scope, FriendFactory, $routeParams){
         $scope.friend = data;
       }
     })
+  $scope.update = function() {
+    console.log('updated friend', $scope.friend);
+    console.log("clicked edit button");
+    FriendFactory.update($scope.friend, function (data) {
+      console.log("this is the edit controller data: ", data);
+    })
+  };
 });

@@ -43,7 +43,12 @@ app.factory('FriendFactory', function($http){
       callback(false);
     }
   }
-
+  factory.update = function(friend, callback) {
+    $http.put('/friends/' + friend._id, friend).then(function(data) {
+      console.log("This is the data we got in factory update", data);
+      callback(data);
+    })
+  }
   return factory;
 
 

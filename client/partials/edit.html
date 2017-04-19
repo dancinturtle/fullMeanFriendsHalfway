@@ -1,7 +1,7 @@
 <h2>Edit partial</h2>
-<form ng-submit="update(friend)" action="index.html" method="post">
-  <p> First Name<input type="text" name="" value="{{friend.first_name}}"></p>
-  <p>Last Name:<input type="text" name="" value="{{friend.last_name}}"></p>
-  <p>birthday: <input type="text" name="" value="{{friend.birthday}}"></p>
+<form ng-submit="update()" method="post">
+  <p> First Name<input type="text" ng-model="friend.first_name"></p>
+  <p>Last Name:<input type="text" ng-model="friend.last_name"></p>
+  <p>birthday: <input type="text" ng-model="friend.birthday"></p>
   <input type="submit" value="Edit">
 </form>

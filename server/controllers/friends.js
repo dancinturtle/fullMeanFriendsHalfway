@@ -25,7 +25,15 @@ module.exports = {
     })
   },
   update: function(req, res){
-    res.json({placeholder: {message: "Update!"}})
+    console.log('server has received the updated friend', req.body);
+    Friend.update({ _id: req.body._id }, req.body, function (err,output) {
+      if (err) {
+        res.json({message: "Error", error:err})
+      }
+      else {
+        res.json({message: "Success", friend:output})
+      }
+    });
   },
   delete: function(req, res){
     res.json({placeholder: {message: "Delete!"}})

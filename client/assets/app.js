@@ -18,10 +18,6 @@ app.config(function($routeProvider){
     templateUrl: 'partials/show.html',
     controller: 'showController'
   })
-  .when('/edit/:id', {
-    templateUrl: 'partials/edit.html',
-    controller: 'editController'
-  })
   .when('/delete/:id', {
     templateUrl: 'partials/delete.html',
     controller: 'deleteController'
